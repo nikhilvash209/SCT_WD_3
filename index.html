@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tic Tac Toe - PvP & AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Mode Selection -->
+  <div class="mode-selector">
+    <h2>Select Game Mode</h2>
+    <button onclick="startGame('pvp')">Player vs Player</button>
+    <button onclick="startGame('ai')">Player vs Computer</button>
+  </div>
+
+  <!-- Game Area -->
+  <div class="game-container hidden">
+    <h1>Tic Tac Toe</h1>
+    <div id="status">Player X's turn</div>
+    <div class="board" id="board"></div>
+    <button onclick="resetGame()">🔁 Restart</button>
+    <button onclick="goBack()">⬅️ Go Back</button>
+  </div>
+
+  <!-- Result Modal -->
+  <div id="result-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2 id="result-message"></h2>
+      <button onclick="resetGame(true)">🔁 Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
